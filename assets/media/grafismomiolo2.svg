@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 20" preserveAspectRatio="none">
+	<defs>
+		<linearGradient id="a" x1="-9741.96" y1="755.78" x2="-8641.96" y2="755.78" gradientTransform="translate(9741.96 -753.78)" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#00cfff00"/>
+			<stop offset="1" stop-color="#00cfffff"/>
+		</linearGradient>
+	</defs>
+	<g data-name="Camada 1">
+		<path transform="rotate(-180 550 2)" fill="url(#a)" d="M0 0h1100v4H0z"/>
+		<path transform="rotate(-180 550 10)" fill="url(#a)" d="M0 8h1100v4H0z"/>
+		<path transform="rotate(-180 550 18)" fill="url(#a)" d="M0 16h1100v4H0z"/>
+	</g>
+</svg>

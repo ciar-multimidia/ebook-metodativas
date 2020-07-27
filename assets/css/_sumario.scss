@@ -1,0 +1,86 @@
+#sumario{
+	background-color: $azul;
+
+	main{
+		padding-top: 6em;
+	}
+	h1{
+		font-size: 4em;
+		font-weight: 300;
+		color: $ciano;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	ol{
+		margin: 0;
+		margin-top: 3em;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 0;
+		& > li{
+			width: calc(33.3333% - 1.3333em);
+			margin-bottom: 3em;
+			&:not(:nth-child(3n)){
+				margin-right: 2em;
+			}
+
+			@media screen and (max-width: $mq-max){
+				width: calc(50% - 2em);
+				&:not(:nth-child(3n)){
+					margin-right: 0;
+				}
+
+				&:not(:nth-child(2n)){
+					margin-right: 2em;
+				}
+			}
+
+			@media screen and (max-width: $mq-min){
+				width: 100%;
+				&:not(:nth-child(2n)){
+					margin-right: 0;
+				}
+			}
+
+			a{
+				text-decoration: none;
+				display: block;
+				h2{
+					font-size: 1.3em;
+					color: white;
+					font-weight: bold;
+				}
+
+				ul.autores{
+					font-size: .9em;
+					list-style: none;
+					padding-left: 0;
+					margin-top: .5em;
+					li{
+						color: $ciano;
+					}
+				}
+			}
+		}
+
+		&.meta-paginas{
+			& > li{
+				margin-bottom: 0;
+				@media screen and (max-width: $mq-min){
+					&:first-child{
+						margin-bottom: 3em;
+					}
+				}
+
+				a{
+					h2{
+						font-size: 1.8em;
+						font-weight: 900;
+					}
+				}
+			}
+		}
+	}
+}

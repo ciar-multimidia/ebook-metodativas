@@ -1,0 +1,395 @@
+header{
+	background-color: $azul;
+	
+
+	.container{
+		position: relative;
+		padding-top: 1em;
+		padding-bottom: 2em;
+		min-height: 20em;
+		height: auto;
+		@media screen and (max-width: $mq-min){
+			min-height: 25em;
+			padding-bottom: 4em;
+		}
+
+
+	}
+	.grafismo1{
+		display: block;
+		height: .5em;
+		margin-bottom: 1em;
+	}
+	a{
+		color: $ciano;
+		text-transform: uppercase;
+		font-size: .8em;
+		text-decoration: none;
+		margin-right: 3em;
+		-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+		@media screen and (max-width: $mq-min){
+			display: block;
+		}
+
+		svg{
+			display: inline-block;
+			height: 1em;
+			width: auto;
+			vertical-align: middle;
+			margin-right: .25em;
+			use{
+				fill: $ciano;
+			}
+		}
+
+		&:hover{
+			color: white;
+			svg use{
+				fill: white;
+			}
+		}
+	}
+
+	.titulo-e-autores{
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		h1{
+			font-weight: bold;
+			font-size: 3em;
+			color: white;
+			width: 60%;
+			&.menor{
+				font-size: 2.4em;
+			}
+		}
+
+		dl.autores{
+			text-align: right;
+			// font-size: .9em;
+			color: white;
+			line-height: 1.3;
+			dt{
+				font-weight: bold;
+				text-transform: uppercase;
+				padding-left: 0;
+				&:not(:first-child){
+					margin-top: 1em;
+				}
+			}
+		}
+
+		@media screen and (max-width: $mq-max){
+			h1{
+				font-size: 2em;
+				&.menor{
+					font-size: 1.8em;
+				}
+			}
+		}
+
+		@media screen and (max-width: $mq-min){
+			display: block;
+			h1{
+				width: 100%;
+			}
+			dl.autores{
+				margin-top: 2em;
+				text-align: left;
+			}
+			// h1{
+			// 	font-size: 1.5em;
+			// 	&.menor{
+			// 		font-size: 1.2em;
+			// 	}
+			// }
+		}
+	}
+	
+
+	.grafismo2{
+		display: block;
+		position: absolute;
+		bottom: 1em;
+
+		@media screen and (max-width: $mq-min){
+			height: 1.5em;
+			width: calc(100% - 2em);
+		}
+	}
+}
+
+main{
+	padding-bottom: 3em;
+}
+
+article{
+	padding-top: 4em;
+	padding-bottom: 4em;
+	& > *{
+		width: 60%;
+		margin-top: 1em;
+		@media screen and (max-width: $mq-max){
+			width: 100%;
+		}
+		
+	}
+
+	.pagina{
+		display: block;
+		font-weight: bold;
+		color: $cor-texto-claro;
+		text-align: right;
+		font-size: .9em;
+		font-weight: normal;
+		margin-top: 2em;
+		& + *{
+			margin-top: .5rem;
+		}
+		&:before{
+			content: "pág. ";
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: $cor-texto-claro;
+			background: linear-gradient(270deg, $cor-texto-claro 0%, transparentize($cor-texto-claro, .8) 100%);
+		}
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+
+	a{
+		color: $azul-escuro;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+
+		-ms-word-break: break-all;
+		 word-break: break-all;
+
+		 -ms-hyphens: auto;
+		 -moz-hyphens: auto;
+		 -webkit-hyphens: auto;
+		 hyphens: auto;
+	}
+
+	h2{
+		font-weight: 900;
+		font-size: 2.2em;
+	}
+
+	h3{
+		font-weight: bold;
+		font-size: 1.7em;
+	}
+
+	h4{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	h5{
+		font-size: 1em;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	@media screen and (max-width: $mq-max){
+		h2{font-size: 1.9em;}
+		h3{font-size: 1.5em;}
+		h4{font-size: 1.1em;}
+	}
+
+	@media screen and (max-width: $mq-max){
+		h2{font-size: 1.6em;}
+		h3{font-size: 1.3em;}
+	}
+
+
+	figure{
+		margin: 0;
+		margin-top: 2em;
+		& + *{
+			margin-top: 2em;
+		}
+		img{
+			display: block;
+			max-width: 100%;
+		}
+		figcaption{
+			font-size: .9em;
+			color: $cor-texto-claro;
+		}
+	}
+
+	.container-table{
+		width: 100%;
+		overflow-x: auto;
+		margin-top: 3em;
+		& + *{
+			margin-top: 3em;
+		}
+	}
+
+	table{		
+		min-width: 60%;
+		max-width: 100%;
+		border-collapse: collapse;
+		font-size: .9em;
+		border-bottom: 4px solid;
+
+		caption{
+			margin-top: .5em;
+			caption-side: bottom;
+			color: $cor-texto-claro;
+			text-align: left;
+			& + tbody{
+				border-top: 4px solid;
+			}
+		}
+
+		th,td{
+			text-align: left;			
+		}
+		thead{
+			border-bottom: 4px solid;
+			th,td{
+				vertical-align: bottom;
+				padding: .25em .5em;
+				font-weight: 900;
+			}
+		}
+
+		tbody{
+			&:first-child{
+				border-top: 4px solid;
+			}
+			tr{
+				border-bottom: 1px solid;
+			}
+			th,td{
+				vertical-align: top;
+				padding: .75em .5em;
+
+			}
+		}
+
+		tfoot{
+			border-top: 2px solid;
+			font-weight: bold;
+			th,td{
+				vertical-align: top;
+				padding: .5em .5em;
+			}
+		}
+	}
+
+	.documento{
+		border: 1px solid $cor-texto-claro;
+		width: auto;
+		min-width: 60%;
+		max-width: 100%;
+		padding: 2em 1em;
+		overflow-x: auto;
+		font-size: .9em;
+		& > *{
+			width: auto;
+			margin: 0;
+			margin-top: 1em;
+			&:first-child{
+				margin-top: 0;
+			}
+		}
+
+		table{
+			min-width: 0;
+			border-bottom: none;
+			thead{
+				border-bottom: none;
+			}
+			thead, tfoot{
+				background-color: $cor-texto;
+				color: white;
+				border-top: none;
+				th,td{
+					border-right: 1px solid white;
+				}
+				th{
+					font-weight: normal;
+				}
+			}
+
+			tbody{
+				th,td{
+					border-right: 1px solid;
+					border-left: 1px solid;
+				}
+			}
+		}
+	}
+
+	& >{
+		h2,h3,h4{
+			& +{
+				h2,h3,h4{
+					margin-top: .5em;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	background-color: $azul;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3em;
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		a{
+			color: $ciano;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: .9em;
+			-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+			
+			svg{
+				display: inline-block;
+				height: 1em;
+				vertical-align: middle;
+				margin-right: .25em;
+				use{
+					fill: $ciano;
+				}
+			}
+
+			&.proximo{
+				svg{
+					margin-right: 0;
+					margin-left: .25em;
+					transform: rotate(180deg);
+				}
+			}
+
+			&[disabled]{
+				pointer-events: none;
+				visibility: hidden;
+			}
+
+			&:hover{
+				color: white;
+				svg use{
+					fill: white;
+				}
+			}
+		}
+	}
+}

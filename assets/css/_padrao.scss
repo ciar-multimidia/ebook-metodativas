@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+/* BOX-SIZING */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* CORES PADRAO */
+
+$ciano: #86FFFF;
+// $azul: #0052FF;
+$azul: #1753d2;
+// $azul-escuro: #1753d2;
+$azul-escuro: #1246B7;
+$cor-texto: #191919;
+$cor-texto-claro: #8B8B8B;
+
+
+/* ESTILO GERAL */
+
+$container-max: 1100px;
+$container-min: 600px;
+
+$mq-max: $container-max + 16px;
+$mq-min: $container-min + 16px;
+
+html{
+	font-size: 16px;
+	@media screen and (max-width: $mq-min){
+		font-size: 15px;
+	}
+
+	line-height: 1.5;
+	font-family: "Muli", sans-serif;
+	color: $cor-texto;
+}
+
+
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	width: $container-max;
+	@media screen and (max-width: $mq-max){
+		width: $container-min;
+	}
+
+	@media screen and (max-width: $mq-min){
+		width: 100%;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+}
+
+h1,h2,h3{
+	margin: 0;
+	line-height: 1.2;
+}
+
+dl{
+	margin: 0;
+	dd{
+		margin-left: 0;
+	}
+}
+
+#svg-definitions{
+	display: none;
+}

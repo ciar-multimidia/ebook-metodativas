@@ -1,0 +1,59 @@
+@media print{
+	html{
+		font-size: 9pt;
+	}
+
+	.container{
+		width: auto;
+		padding: 0;
+	}
+
+	header{
+		background-color: transparent;
+		border-bottom: 1px solid;
+		.container{
+			height: auto;
+		}
+		.grafismo1, .grafismo2, a{
+			display: none;
+		}
+		.titulo-e-autores{
+			h1{
+				color: $cor-texto;
+			}
+			dl.autores{
+				color: $cor-texto;
+			}
+		}
+	}
+
+	#portal{
+		color: $cor-texto;
+		border-bottom: 1px solid;
+
+		.grafismo{
+			display: none;
+		}
+
+		.links{
+			display: none;
+		}
+
+	}
+
+
+	article{
+		.pagina{
+			border-bottom: 1px dotted $cor-texto-claro;
+			&:after{
+				content: none;
+			}
+		}
+	}
+
+
+	footer{
+		display: none;
+	}
+
+}
