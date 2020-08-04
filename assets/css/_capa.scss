@@ -116,3 +116,18 @@ article.sobre{
 		}
 	}
 }
+
+.fichacat {
+	border: 1px solid #000;
+	padding: 20px 40px;
+	width: 70%;
+	.dados {
+		width: 50px;
+		float: left;
+	}
+	.ficha {
+		float: right;
+		width:calc(100% - 50px);
+	}
+
+}
